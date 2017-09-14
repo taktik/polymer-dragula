@@ -169,6 +169,7 @@ Polymer wrapper of dragula drag and drop library
           },
 
           attached: function () {
+              Polymer.RenderStatus.beforeNextRender(this, function() {
               var config = {
                   isContainer: this.fnIsContainer,
                   moves: this.fnMoves,
@@ -226,6 +227,7 @@ Polymer wrapper of dragula drag and drop library
                   this.fire('dragula-cloned', {clone: clone, container: container, type: type});
               }.bind(this));
               this.drake = drake;
+              }.bind(this))
           },
           detached: function () {
               this.drake.destroy();
