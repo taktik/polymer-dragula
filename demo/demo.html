@@ -23,13 +23,39 @@
         .column {
             border: 1px dotted #0d47a1;
             margin: 5px;
-            display: block;
+            display: inline-block;
             padding: 15px;
             background-color: #ffcc80;
             cursor: move;
             cursor: grab;
             cursor: -moz-grab;
             cursor: -webkit-grab;
+        }
+
+        .gu-mirror {
+            position: fixed !important;
+            margin: 0 !important;
+            z-index: 9999 !important;
+            opacity: 0.8;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+            filter: alpha(opacity=80);
+        }
+        .gu-hide {
+            display: none !important;
+        }
+        .gu-unselectable {
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+        }
+        .gu-transit {
+            opacity: 0.2;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+            filter: alpha(opacity=20);
+        }
+        polymer-dragula {
+            width: 100%;
         }
     </style>
 </head>
@@ -38,7 +64,7 @@
     <h3>Basic polymer-dragula demo</h3>
     <demo-snippet>
         <template>
-            <polymer-dragula>
+            <polymer-dragula direction="horizontal">
                 <div class="row-holder">
                     <div class="column">
                         <p>item-1</p>
