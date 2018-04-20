@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "dragula.js": "https://github.com/taktik/dragula.git#b560ce374812f7df9f61b32bcac943d4318fd56f"
+    "dragula.js": "https://github.com/taktik/dragula.git#c522f55b9574b964ccb03e11de09384abfc7591e"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^3.0.1",
